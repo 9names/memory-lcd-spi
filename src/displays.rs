@@ -56,6 +56,16 @@ impl DisplaySpec for LS006B7DH01 {
     type Framebuffer = FramebufferBW<{ Self::WIDTH }, { Self::HEIGHT }, Sharp>;
 }
 
+/// 1.28inch, 96x96 BW display, 10pin 0.5mm FPC
+pub struct LS013B4DN04;
+
+impl DisplaySpec for LS013B4DN04 {
+    const WIDTH: u16 = 96;
+    const HEIGHT: u16 = 96;
+
+    type Framebuffer = FramebufferBW<{ Self::WIDTH }, { Self::HEIGHT }, Sharp>;
+}
+
 /// 1.28inch, 128x128 BW display, 10pin 0.5mm FPC
 pub struct LS013B7DH03;
 
@@ -65,6 +75,7 @@ impl DisplaySpec for LS013B7DH03 {
 
     type Framebuffer = FramebufferBW<{ Self::WIDTH }, { Self::HEIGHT }, Sharp>;
 }
+
 
 /// 2.8inch, 400x240 BW display, 10pin 0.5mm FPC
 pub struct LS027B7DH01;
